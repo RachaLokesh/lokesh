@@ -60,7 +60,7 @@ $( document ).ready(function() {
 
                        'content-type': "application/json",
 
-                       'X-RapidAPI-Key': '69f5629098msh2937e5cf4b4a80ep1f6681jsn8d964b518220',
+                       'X-RapidAPI-Key': 'e615b45ce6msha39ac418c2e5b92p185356jsn005f0dc4e8f9',
 
                        'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
 
