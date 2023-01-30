@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+     src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Jokes</title>
+    <link rel="stylesheet" href="challenge.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div id="limit" class="limit" document.getElementById(count) ></div>
+            <h3>😂Best Jokes to make your day😂</h3>
+            <div align="center" id="joke1" class="joke1" ></div>
+            <br>
+            <br>
+            <div align="center" id="joke2" class="joke2"></div> 
+        </div>
+
+        <div class="row mt-1">
+            <div class="col-md-3 offset-md-3">
+                <div class="form-group" align="center">
+                    <input placeholder="  Joke Count " class="btn" type="number" max="50" onkeypress="if (this.value.length > 1 ) return false;" id= "txtcount"/>
+
+                    <button class="btn" type="button" id="btncount" onclick ="validate()">Submit</button>
+                    <br>
+                    <br>
+
+                    <button class="btn" type="button"  value= Next😁Joke  id= "btn" onclick="hidden()">Click😁Jokes</button>
+                    <br>
+                    <br>
+
+                    <button class="btn" type="button" id="clr" onclick="locationreload()">Restart</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function locationreload() {
+            location.reload();
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="challengetask.js"></script>
+</body>
+</html>
+
+

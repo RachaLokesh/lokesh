@@ -1,0 +1,113 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100&family=Raleway:ital,wght@0,300;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:wght@100;300;400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,700&display=swap'); */
+@import url("/node_modules/bootstrap/scss/bootstrap");
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* background: rgb(158, 181, 197); */
+    /* background-color: rgb(147, 214, 237); */
+    background-image: url("https://img.freepik.com/free-vector/realistic-emoji-party-background_79603-1587.jpg?w=2000");}
+
+.container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    row-gap: 40px;
+
+    margin-top: 130px;
+
+}
+
+.box {
+
+    /* background-color:rgb(230, 243, 184); */
+    background-color:#b1c0f8;
+
+    border-radius: 18px;
+
+    box-shadow: rgba(236, 116, 11, 0.2) 0px 7px 29px 0px;
+
+    text-align: center;
+
+    width: 650px;
+
+    height: 20vmax;
+
+    padding: 14px;
+
+    border: 4px dashed darkcyan;
+
+}
+
+h3 {
+    line-height: 3rem;
+    font-size: 30px;
+
+}
+
+.btn {
+
+    width: 120px;
+
+    height: 50px;
+
+    background-color:#b1c0f8;
+
+    /* margin-top: 100px; */
+
+    align-items: flex;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    border-radius: 13px;
+
+    box-shadow: rgba(221, 63, 6, 0.02) 0px 1px 3px 0px, rgba(225, 44, 16, 0.15) 0px 0px 0px 1px;
+
+    cursor: pointer;
+
+    transition: all 0.5s ease;
+
+}
+
+.btn:hover {
+    background: rgb(233, 158, 158);
+    }
+    .joke {
+        font-size: 18px;
+        line-height: 2.5 rem;
+        padding: 0 5px 35px 5px;
+        font-weight: 500;
+    }
+
+@media only screen and (max-width:600px) {
+.box {
+    width: 600%;max-height: 500px;
+}
+    h3 {
+         font-size: 23px;
+        }
+    }
+
+@media only screen and (max-width: 1000px) {
+     .box {
+        width: 600px;
+    }
+    /* .btn {    margin-top: 12ch; } */
+    
+    h3 {
+        font-size: 22px;
+     }
+
+    .joke {
+        font-size: 25px;
+    }
+}
