@@ -2,9 +2,9 @@ const temp = document.getElementById("limit");
 
 $( document ).ready(function() {
   var userinput=0;
-  var count=0;
-  var total =0;
-  var i=1;
+  var count=1;
+  console.log("firstcountvalue"+count)
+
   document.querySelector('#btn').style.display = 'none'; 
   document.querySelector('#clr').style.display = 'none'; 
   document.querySelector('#btncount').addEventListener('click',showBtn);
@@ -17,24 +17,24 @@ $( document ).ready(function() {
 
   $('#btncount').click(function (){
    userinput= $('#txtcount').val();
-   total=userinput;
-   temp.innerHTML = "<h4 style='dispaly:flex;margin-right: 30px;'>"+'Your Joke Count : '+total+"</h4>"
+   temp.innerHTML = "<h4 style='dispaly:flex;margin-right: 30px;'>"+'Your Joke Count : '+userinput+"</h4>"
    if(userinput>0)
    {
-   document.getElementById('btncount').style.visibility= 'hidden';
+   document.getElementById('btncount').style.display="none";
+
    //console.count(userinput);
-   document.getElementById('txtcount').style.visibility= 'hidden';
+   document.getElementById('txtcount').style.display="none";
    $('#btncount').prop('disabled', true);
    //console.count(userinput);
-   alert("Count Submitted successfully..")
+  //  alert("Count Submitted successfully..")
    }
-   else
-   {
-    alert("Please enter the value");
-   }
-   count=0;
+  //  else
+  //  {
+  //   alert("Please enter the value");
+  //  }
    console.log(count);
    $.ajax({
+    
 
     type: 'GET',
 
@@ -55,29 +55,33 @@ $( document ).ready(function() {
     success: function (data)
 
     {
-      $('#joke1').html(i+". "+data.body[0].setup);
+      $('#joke1').html(count+". "+data.body[0].setup);
 
       console.log(data.body[0].setup);
 
       $('#joke2').html(data.body[0].punchline);
 
       console.log(data.body[0].punchline);
-    i++;
+      console.log("indoc."+count);
+
     }
   });
  });
 
   $('#btn').click(function(){
-    count=count+1;
+     count=count+1;
+     console.log("beforeinput"+count);
 
-     if(count=userinput){
+     if(count==userinput){
 
       $('#btn').prop('disabled', true);
+      // document.querySelector('#btn').style.display = 'none'; 
 
+      // document.getElementById('btn').style.display="none";
       document.getElementById('btn').style.visibility= 'hidden';
     }
       
-   console.log(count);
+   console.log("afterinput"+count);
    
     $.ajax({
 
@@ -100,14 +104,16 @@ $( document ).ready(function() {
     success: function (data)
 
     {
-      $('#joke1').html(i+". "+data.body[0].setup);
+      console.log("insuccess"+count);
+
+      $('#joke1').html(count+". "+data.body[0].setup);
 
       console.log(data.body[0].setup);
 
       $('#joke2').html(data.body[0].punchline);
 
       console.log(data.body[0].punchline);
-    i++;
+      console.log("inbuttonclick"+count)
     }
 
   });
@@ -115,7 +121,5 @@ $( document ).ready(function() {
 });
 
 });
-
-
 
 
