@@ -34,12 +34,43 @@ $( document ).ready(function() {
    }
    count=0;
    console.log(count);
+   $.ajax({
+
+    type: 'GET',
+
+    url: 'https://dad-jokes.p.rapidapi.com/random/joke',
+
+    dataType: 'json',
+
+    headers: {
+
+                       'content-type': "application/json",
+
+                       'X-RapidAPI-Key': 'c0664e7191msh361e3a0f59cac75p16484fjsn0dae86e9251b',
+
+                       'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
+
+                    },
+
+    success: function (data)
+
+    {
+      $('#joke1').html(i+". "+data.body[0].setup);
+
+      console.log(data.body[0].setup);
+
+      $('#joke2').html(data.body[0].punchline);
+
+      console.log(data.body[0].punchline);
+    i++;
+    }
+  });
  });
 
   $('#btn').click(function(){
     count=count+1;
 
-     if(count>=userinput){
+     if(count=userinput){
 
       $('#btn').prop('disabled', true);
 
@@ -60,7 +91,7 @@ $( document ).ready(function() {
 
                        'content-type': "application/json",
 
-                       'X-RapidAPI-Key': 'e615b45ce6msha39ac418c2e5b92p185356jsn005f0dc4e8f9',
+                       'X-RapidAPI-Key': 'c0664e7191msh361e3a0f59cac75p16484fjsn0dae86e9251b',
 
                        'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
 
@@ -84,5 +115,7 @@ $( document ).ready(function() {
 });
 
 });
+
+
 
 
