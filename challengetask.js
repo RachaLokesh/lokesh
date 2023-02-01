@@ -1,5 +1,7 @@
 
 
+
+
 const temp = document.getElementById("limit");
 
 $(document).ready(function () {
@@ -12,6 +14,7 @@ $(document).ready(function () {
     if (count == userinput) {
 
       $('#btn').prop('disabled', true);
+           
       document.getElementById('btn').style.visibility = 'hidden';
     }
 
@@ -29,7 +32,7 @@ $(document).ready(function () {
 
         'content-type': "application/json",
 
-        'X-RapidAPI-Key': 'e615b45ce6msha39ac418c2e5b92p185356jsn005f0dc4e8f9',
+        'X-RapidAPI-Key': '69f5629098msh2937e5cf4b4a80ep1f6681jsn8d964b518220',
 
         'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
 
@@ -53,7 +56,6 @@ $(document).ready(function () {
     });
   }
 
- 
   console.log("firstcountvalue" + count)
   document.querySelector('#btn').style.display = 'none';
 
@@ -73,8 +75,6 @@ $(document).ready(function () {
       document.getElementById('btncount').style.display = "none";
       document.getElementById('txtcount').style.display = "none";
     }
-
-    $('#btncount').prop('disabled', true);
     console.log(count);
     getJoke();
   });
@@ -84,6 +84,8 @@ $(document).ready(function () {
     getJoke();
   });
 });
+
+
 
 
 
