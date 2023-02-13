@@ -1,7 +1,3 @@
-
-
-
-
 const temp = document.getElementById("limit");
 
 $(document).ready(function () {
@@ -33,7 +29,7 @@ $(document).ready(function () {
 
         'content-type': "application/json",
 
-        'X-RapidAPI-Key': '9bb608e8a4mshd8a19dfff003accp1a9b22jsna8ff0ad0958c',
+        'X-RapidAPI-Key': 'e615b45ce6msha39ac418c2e5b92p185356jsn005f0dc4e8f9',
 
         'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
 
@@ -71,15 +67,16 @@ $(document).ready(function () {
   }
   $('#btncount').click(function () {
     userinput = $('#txtcount').val();
-    temp.innerHTML = "<h4 style='dispaly:flex;margin-right: 30px;'>" + 'Your Joke Count : ' + userinput + "</h4>"
     if (userinput > 0) {
+      alert("Count Successfully Submitted");
+      temp.innerHTML = "<h4 style='dispaly:flex;margin-right: 30px;'>" + 'Your Joke Count : ' + userinput + "</h4>"
       console.log(userinput);
       getJoke();
       document.getElementById('btncount').style.display = "none";
       document.getElementById('txtcount').style.display = "none";
     }
     else{
-       alert("enter value");
+       alert("Please Enter value");
        document.getElementById('btn').style.display = "none";
        document.getElementById('clr').style.display = "none";
     }
@@ -92,4 +89,5 @@ $(document).ready(function () {
     getJoke();
   });
 });
+
 
